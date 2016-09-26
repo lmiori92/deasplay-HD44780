@@ -26,16 +26,16 @@
  * @brief Display HAL to interface the APIs to the LC75710
  */
 
-#ifndef SRC_DEASPLAY_DRIVER_LC75710_LC75710_HAL_H_
-#define SRC_DEASPLAY_DRIVER_LC75710_LC75710_HAL_H_
+#ifndef SRC_DEASPLAY_DRIVER_HD44780_HD44780_HAL_H_
+#define SRC_DEASPLAY_DRIVER_HD44780_HD44780_HAL_H_
 
-#include "../../deasplay.h"
+#include "../deasplay_hal.h"
 
-#define HD44780_LINES        2U     /**< Number of lines */
-#define HD44780_CHARS       16U     /**< Number of character per lines */
+#define HD44780_LINES       DEASPLAY_LINES    /**< Number of lines */
+#define HD44780_CHARS       DEASPLAY_CHARS    /**< Number of character per lines */
 
 void hd44780_display_hal_init(void);
-void hd44780_display_hal_power(e_deasplay_power state);
+void hd44780_display_hal_power(e_deasplay_HAL_power state);
 void hd44780_display_hal_set_cursor(uint8_t line, uint8_t chr);
 void hd44780_display_hal_write_char(uint8_t chr);
 void hd44780_display_hal_cursor_visibility(bool visible);
