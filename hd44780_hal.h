@@ -41,6 +41,15 @@ void hd44780_display_hal_write_char(uint8_t chr);
 void hd44780_display_hal_cursor_visibility(bool visible);
 void hd44780_set_extended(uint8_t id, uint8_t *data, uint8_t len);
 
+/* bindings */
+#define deasplay_hal_init               hd44780_display_hal_init
+#define deasplay_hal_power              hd44780_display_hal_power
+#define deasplay_hal_set_cursor         hd44780_display_hal_set_cursor
+#define deasplay_hal_write_char         hd44780_display_hal_write_char
+#define deasplay_hal_cursor_visibility  hd44780_display_hal_cursor_visibility
+#define deasplay_hal_write_extended     hd44780_write_extended
+#define deasplay_hal_set_extended       hd44780_set_extended
+
 /* Enable library features */
 #define HAS_CHARACTER_INTERFACE
 /*#define HAS_BITMAP_INTERFACE*/
