@@ -29,7 +29,10 @@
 #ifndef SRC_DEASPLAY_DRIVER_HD44780_HD44780_HAL_H_
 #define SRC_DEASPLAY_DRIVER_HD44780_HD44780_HAL_H_
 
-#include "../deasplay_hal.h"
+/** This driver requires taxibus */
+#define TAXIBUS_REQUIRED
+
+#include "deasplay/deasplay_hal.h"
 
 #define HD44780_LINES       DEASPLAY_LINES    /**< Number of lines */
 #define HD44780_CHARS       DEASPLAY_CHARS    /**< Number of character per lines */
