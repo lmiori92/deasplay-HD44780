@@ -27,11 +27,11 @@
  */
 
 /* include the settings, to see if the file has to be compiled */
-#include "../../deasplay.h"
+#include "deasplay/deasplay.h"
 
 #ifdef DEASPLAY_HD44780
 
-#include "../../taxibus/interface.h"
+#include "taxibus/interface.h"
 
 static uint8_t hd44780_virtual_port = 0U;
 
